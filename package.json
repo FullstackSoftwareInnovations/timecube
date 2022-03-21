@@ -1,0 +1,13 @@
+{
+  "name": "timecube",
+  "version": "1.0.1",
+  "description": "When you need to fill up space with something more interesting than lorem ipsum",
+  "main": "dist/index.js",
+  "repository": "FullstackSoftwareInnovations/timecube",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["timecube", "lorem", "ipsum"],
+  "author": "FullstackSoftwareInnovations",
+  "license": "MIT"
+}
