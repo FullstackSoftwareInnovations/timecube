@@ -1,11 +1,13 @@
 {
   "name": "timecube",
-  "version": "1.0.1",
-  "description": "When you need to fill up space with something more interesting than lorem ipsum",
+  "version": "2.0.0",
+  "private": false,
+  "description": "When you need to fill up space with something more interesting than lorem ipsum. Quotes from Dr. Gene Ray's Time Cube blog.",
   "main": "dist/index.js",
   "repository": "FullstackSoftwareInnovations/timecube",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./dist/index.js",
+    "parse": "node ./util/TimeCubeParser.js"
   },
   "keywords": ["timecube", "lorem", "ipsum"],
   "author": "FullstackSoftwareInnovations",

@@ -1,6 +1,13 @@
 const generator = require('./TimeCubeGenerator')
 
 module.exports = {
+    maxLines: generator.maxLines,
     generate: generator.generateTimeCube,
-    max: generator.max
+    generateRandom: generator.generateRandom,
+
+    maxChunks: generator.maxChunks,
+    generateChunks: generator.generateTimeCubeChunks,
+    generateRandomChunk: generator.generateRandomChunk
+
+
 }
