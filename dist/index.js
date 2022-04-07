@@ -8,6 +8,4 @@ module.exports = {
     maxChunks: generator.maxChunks,
     generateChunks: generator.generateTimeCubeChunks,
     generateRandomChunk: generator.generateRandomChunk
-
-
 }
