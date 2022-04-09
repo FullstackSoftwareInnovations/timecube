@@ -16,15 +16,20 @@ npm install timecube
 const timecube = require('timecube')
 
 function PraiseFourCornerTime () {
-  console.log(timecube.generate(1, timecube.max))
+    let sentenceCount = 5 
+    let startIndex = 10 
+    let timecubeBlock = timecube.generate(sentenceCount, startIndex)
+    
+    console.log(timecubeBlock)
 }
 ```
 
 # Parameters
 ### start: number (optional) 
 default - 1
+
 ### stop: number (optional) 
-default - timecube.max
+default - timecube.maxLines
 
 
 # License
