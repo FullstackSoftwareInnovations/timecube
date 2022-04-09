@@ -1,17 +1,15 @@
 const timecube = require('./data/timecube.json')
 const paragraphs = require('./data/paragraphs.json')
-const maxLength = timecube.length -1
+const maxLength = timecube.length
 
 module.exports = {
     maxLines: maxLength,
 
-    maxChunks: paragraphs.length-1,
+    maxChunks: paragraphs.length,
 
-    generateTimeCube: function (start = 0, stop = maxLength, formatted = false) {
-        if (start > stop) return ""
+    generateTimeCube: function (count = maxLength, start = 0, formatted = false) {
         try {
-
-            return formatSelection(timecube.slice(Math.max(start, 0), Math.min(stop+1, maxLength)).join(" "), formatted)
+            return formatSelection(timecube.slice(Math.max(start, 0), Math.min(start+count, maxLength)).join(" "), formatted)
         } catch (ignored){
             return ""
         }
@@ -28,7 +26,7 @@ module.exports = {
     },
 
 
-    generateTimeCubeChunks: function (count = 1, start = 0, stop = paragraphs.length - 1, formatted = false){
+    generateTimeCubeChunks: function (count = 1, start = 0, formatted = false){
 
         try {
             let chunks = []
@@ -37,7 +35,6 @@ module.exports = {
                 let cStart = paragraphs[cIndex]
                 let cStop = paragraphs[cIndex+1]
                 let chunk = timecube.slice(cStart,cStop).join(" ")
-                console.log(chunk)
                 chunks.push(formatSelection(chunk, formatted))
             }
             return chunks
